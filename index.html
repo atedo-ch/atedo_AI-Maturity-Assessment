@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>atedo | KI-Maturitäts-Analyse</title>
+    
+    <!-- Google Fonts: Roboto Slab as fallback for Soho Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Soho Pro"', '"Roboto Slab"', 'serif'], 
+            },
+            colors: {
+              atedo: {
+                dark: '#193250',
+                card: '#274060',
+                orange: '#FF9F8C', // Updated to #FF9F8C
+                'orange-light': '#FF9E8A',
+                gray: '#F8FAFC', // Replacement for White (Cards/Sections)
+                'gray-bg': '#F1F5F9', // Slightly darker background for pages/inputs
+              }
+            },
+            backgroundImage: {
+              'atedo-hero': 'linear-gradient(180deg, #5196C8 0%, #193250 100%)',
+              'atedo-orange-gradient': 'linear-gradient(90deg, #FF957D 0%, #FF7865 100%)',
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(25, 50, 80, 0.05)',
+              'soft-hover': '0 10px 25px -5px rgba(25, 50, 80, 0.1)',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #F1F5F9; /* atedo-gray-bg */
+        color: #193250; /* Default text color to atedo dark */
+      }
+      
+      /* Smooth scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 0px; /* Changed to 0px for square edges */
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+
+      /* Custom select arrow */
+      select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23193250' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 1rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
